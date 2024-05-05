@@ -1,0 +1,7 @@
+@import url(src/css/normalize.css);
+@import url(src/css/variables.css);
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+}

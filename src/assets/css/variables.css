@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@font-face {
+  font-family: 'BROMPH_TOWN';
+  src: url("../fonts/BROMPH_TOWN.ttf") format('truetype');
+}
+
+:root {
+
+  --font-primary: 'Open Sans', sans-serif;
+  --font-headers: 'BROMPH_TOWN', sans-serif;
+
+  --font-size-76: 4.75rem;
+  --font-size-60: 3.75rem;
+  --font-size-40: 2.5rem;
+  --font-size-36: 2.25rem;
+  --font-size-24: 1.5rem;
+  --font-size-20: 1.25rem;
+  --font-size-16: 1rem;
+  --font-size-14: 0.875rem;
+  --font-size-12: 0.75rem;
+
+  --neutral-dark: #000000;
+  --neutral-light: #ffffff;
+  --neutral-medium: #090909;
+  --neutral-medium-dark: #444444;
+  --neutral-medium-light: #9E9E9E;
+
+  --color-blue-light: #00579D;
+
+  --primary: #FFC800;
+  --primary-light: #FFE480;
+  --primary-dark: #FF4D00;
+  /* --primary-gradient: 
+    background: -webkit-linear-gradient(rgb(255,200,0), rgb(255,77,0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  ; */
+
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.5rem;
+  --spacing-6: 1.75rem; 
+  --spacing-7: 2.25rem;
+  --spacing-8: 3rem;
+  --spacing-9: 3.5rem; 
+  --spacing-10: 4rem;   
+
+}

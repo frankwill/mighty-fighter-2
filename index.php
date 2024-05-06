@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <h1 class="text-h2">LUTADORES</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sit! Facere eligendi alias iure ullam. Maiores, numquam tenetur similique debitis exercitationem dolorum animi dolores. Sapiente necessitatibus eum adipisci repellat consequatur?</p>
 </body>
 </html>

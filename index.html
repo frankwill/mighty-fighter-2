@@ -8,14 +8,16 @@
   </head>
   <body>
     <div id="root">
-      <nav>
-        <a href="/" onclick="route()">Início</a>
-        <a href="/lutadores" onclick="route()">Lutadores</a>
-        <a href="/social" onclick="route()">Social</a>
-        <a href="/changelog" onclick="route()">Changelog</a>
-        <a href="/login" onclick="route()">Fazer login</a>
-      </nav>
-      <div id="main-page"></div>
+      <header class="d-flex align-items-center">
+        <nav class="navigation__container d-flex column-gap-9 text-h6 pa-3">
+          <a href="/" onclick="route()" class="navigation__links">Início</a>
+          <a href="/lutadores" onclick="route()" class="navigation__links">Lutadores</a>
+          <a href="/social" onclick="route()" class="navigation__links">Social</a>
+          <a href="/changelog" onclick="route()" class="navigation__links">Changelog</a>
+          <a href="/login" onclick="route()" class="navigation__links">Logar</a>
+        </nav>
+      </header>
+      <div id="main-page" class="d-flex flex-column align-items-center"></div>
     </div>
 
     <script src="src/assets/js/router.js"></script>

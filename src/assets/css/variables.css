@@ -31,11 +31,6 @@
   --primary: #FFC800;
   --primary-light: #FFE480;
   --primary-dark: #FF4D00;
-  /* --primary-gradient: 
-    background: -webkit-linear-gradient(rgb(255,200,0), rgb(255,77,0));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  ; */
 
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;

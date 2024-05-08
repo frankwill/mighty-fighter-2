@@ -1,7 +1,8 @@
 const navigationLinks = document.querySelectorAll('.navigation__links')
 
-navigationLinks.forEach(link => {
+navigationLinks.forEach(link => {  
   link.addEventListener('click', () => {
-    // link.innerHTML.style.color = "red"
+    navigationLinks.forEach(allLinks => allLinks.classList.remove("active"))
+    link.classList.add("active")
   })
 })

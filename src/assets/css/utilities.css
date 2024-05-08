@@ -1012,3 +1012,7 @@
   margin-top: var(--spacing-10) !important;
   margin-bottom: var(--spacing-10) !important;
 }
+
+.active {
+  color: var(--primary-dark) !important;
+}

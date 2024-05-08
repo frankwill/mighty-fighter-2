@@ -3,13 +3,8 @@
 @import url(src/assets/css/utilities.css);
 @import url(src/assets/css/index.css);
 
-
-#root {
-  background-image: url("src/assets/images/bg-header.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -18,6 +13,15 @@ body {
   font-size: 1rem;
   color: var(--neutral-light);
   background-color: var(--neutral-medium);
+  background-image: url("src/assets/images/bg-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#root {
+  height: 100vh;
+  width: calc( 100% );
+  max-width: calc( 100vw - 1em );
 }
 
 .navigation__links {

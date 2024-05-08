@@ -1,8 +1,4 @@
-const navigationLinks = document.querySelectorAll('.navigation__links')
+import navigationLinks from "./navigationLinks.js";
 
-navigationLinks.forEach(link => {  
-  link.addEventListener('click', () => {
-    navigationLinks.forEach(allLinks => allLinks.classList.remove("active"))
-    link.classList.add("active")
-  })
-})
+
+navigationLinks()

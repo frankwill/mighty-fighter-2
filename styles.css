@@ -16,13 +16,26 @@ body {
   background-image: url("src/assets/images/bg-header.png");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--neutral-medium-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-dark);
+  border-radius: 4px;
 }
 
 #root {
   height: 100vh;
-  width: calc( 100% );
-  max-width: calc( 100vw - 1em );
 }
+
 
 .navigation__links {
   text-decoration: none;
@@ -32,6 +45,5 @@ body {
 .navigation__links:hover {
   color: var(--primary-dark);
 }
-
 
 

@@ -43,8 +43,17 @@ body::-webkit-scrollbar-thumb {
   color: var(--neutral-light);
 }
 
-.navigation__links:hover {
-  color: var(--primary-dark);
+
+.card__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
+.card__title {
+  grid-column: 2 / 3;
+}
 
+.card__data {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}

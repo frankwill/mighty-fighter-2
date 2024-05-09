@@ -17,6 +17,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {

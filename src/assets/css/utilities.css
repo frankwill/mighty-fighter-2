@@ -3,23 +3,23 @@
 }
 
 .color-neutral-dark {
-  color: var(--neutral-dark) !important;
+  color: var(--neutral-dark) !important ;
 }
 
 .color-neutral-light {
-  color: var(--neutral-light);
+  color: var(--neutral-light) !important;
 }
 
 .color-neutral-medium {
-  color: var(--neutral-medium);
+  color: var(--neutral-medium) !important;
 }
 
 .color-neutral-medium-dark {
-  color: var(--neutral-medium-dark);
+  color: var(--neutral-medium-dark) !important;
 }
 
 .color-neutral-medium-light {
-  color: var(--neutral-medium-light);
+  color: var(--neutral-medium-light) !important;
 }
 
 .color-primary {
@@ -66,10 +66,15 @@
   min-width: 180px;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .btn.flat {
   background-color: var(--primary-dark);
+}
+
+.btn.outlined {
+  border: 2px solid var(--primary-dark);
 }
 
 .text-caption {
@@ -124,7 +129,7 @@
 .text-h6 {
   font-family: var(--font-primary);
   font-size: var(--font-size-20);
-  font-weight: 500;
+  font-weight: bold;
   line-height: normal;
 }
 
@@ -151,6 +156,10 @@
 .d-flex {
   display: flex !important;
   justify-content: center;
+}
+
+.d-flex.wrap  {
+  flex-wrap: wrap !important;
 }
 
 .flex-column {

@@ -2,6 +2,7 @@
 @import url(src/assets/css/variables.css);
 @import url(src/assets/css/utilities.css);
 @import url(src/assets/css/index.css);
+@import url(src/assets/css/lutadores.css);
 
 * {
   box-sizing: border-box;
@@ -97,6 +98,7 @@ body::-webkit-scrollbar-thumb {
 
 .rodape {
   border-top: 1px solid var(--neutral-medium-dark);
+  background-color: var(--neutral-dark);
 }
 
 .rodape__content {

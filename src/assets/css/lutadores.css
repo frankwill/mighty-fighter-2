@@ -1,0 +1,41 @@
+/* .cards__lutadores {} */
+
+.card-lutador {
+  width: 330px;
+  height: 263px;
+  background-color: var(--color-blue-light);
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 900px) {
+  .card-lutador {
+    width: 200px;
+    /* height: 100px; */
+  }
+}
+
+.card-lutador__image {
+  width: 260px;
+}
+.card-lutador__content {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--neutral-dark);
+  padding: 12px;
+  width: -webkit-fill-available;
+  text-align: center;
+}
+
+.card-lutador {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all 0.8s ease-in-out;
+}
+
+.card-lutador:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.01);
+}

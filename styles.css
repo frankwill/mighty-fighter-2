@@ -51,8 +51,21 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--neutral-dark);
   padding: 18px 20px;
   border-radius: 4px;
-  max-width: 470px;
+  max-width: 330px;
 }
+
+@media screen and (min-width: 600px) {
+  .card {
+    min-width: 600px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .card {
+    min-width: 330px;
+  }
+}
+
 
 .card__content {
   display: grid;
@@ -72,4 +85,20 @@ body::-webkit-scrollbar-thumb {
 .card__data {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+}
+
+.changelog:nth-last-child(2) {
+  border-bottom: none;
+}
+
+.changelog {
+  border-bottom: 1px solid var(--neutral-medium-dark);
+}
+
+.rodape {
+  border-top: 1px solid var(--neutral-medium-dark);
+}
+
+.rodape__content {
+  background-color: var(--neutral-dark);
 }

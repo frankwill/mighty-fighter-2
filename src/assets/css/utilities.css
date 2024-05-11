@@ -82,7 +82,7 @@
   font-size: var(--font-size-12);
   font-weight: 400;
   line-height: normal;
-  color: var(--neutral-medium);
+  color: var(--neutral-medium-light);
 }
 
 .text-h1 {
@@ -191,7 +191,7 @@
 }
 
 .justify-content-start {
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 
 .justify-items-center {
@@ -1035,4 +1035,9 @@
 
 .active {
   color: var(--primary-dark) !important;
+}
+
+.line-divider {
+  border: 1px solid var(--neutral-medium-dark);
+  width: 330px;
 }

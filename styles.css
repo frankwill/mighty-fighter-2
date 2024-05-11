@@ -96,6 +96,12 @@ body::-webkit-scrollbar-thumb {
   border-bottom: 1px solid var(--neutral-medium-dark);
 }
 
+.btn-edit {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
 .rodape {
   border-top: 1px solid var(--neutral-medium-dark);
   background-color: var(--neutral-dark);

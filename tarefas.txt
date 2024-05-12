@@ -1,5 +1,11 @@
 - FRONT-END
 [ x ] - Arrumar redirecionamentos dos botões "Ver mais" das seções Social Mighty e Changelog
+[  ] - Criar modal de editar um changelog
 
 - BACK-END
-[  ] - Criar uma melhor estrutura de pastas para deixar as lógicas do PHP (src para backend e public para o frontend)
+[ x ] - Criar uma melhor estrutura de pastas para deixar as lógicas do PHP (src para backend e public para o frontend)
+[ x ] - Classe Changelog e repositório criado
+[  ] - Transformas oque vem do banco em objetos do tipo Changelog
+[  ] - Exibir esses objetos do tipo changelog no frontend
+[  ] - Implementar sistema de atualizar os changelogs através do icone de editar
+[  ] - Criar seção com algumas permições para o usuário admin.

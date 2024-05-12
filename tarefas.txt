@@ -1,1 +1,1 @@
-[  ] - Arrumar redirecionamentos dos botões "Ver mais" das seções Social Mighty e Changelog
+[ x ] - Arrumar redirecionamentos dos botões "Ver mais" das seções Social Mighty e Changelog

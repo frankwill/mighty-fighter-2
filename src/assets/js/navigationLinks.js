@@ -9,15 +9,20 @@ export default function navigationLinks() {
     })
   })
 
-  const linkLutadores = arrayNavigationLinks.find(link => link.getAttribute("href") === "/lutadores")
+  
   window.navigation.addEventListener("navigate", (event) => {  
+    const destinationUrl = new URL(event.destination.url);
+    const path = destinationUrl.pathname;
+
     navigationLinks.forEach(link => {
       if(link.classList.contains("active")) {
         link.classList.remove("active")
       }
     })
-    if (event.destination.url === "http://127.0.0.7:5500/lutadores") {
-      linkLutadores.classList.add("active")
+
+    const linkActive = arrayNavigationLinks.find(link => link.getAttribute("href") === path)
+    if (linkActive) {
+      linkActive.classList.add("active")
     }
   })
 }

@@ -1,1 +1,5 @@
+- FRONT-END
 [ x ] - Arrumar redirecionamentos dos botões "Ver mais" das seções Social Mighty e Changelog
+
+- BACK-END
+[  ] - Criar uma melhor estrutura de pastas para deixar as lógicas do PHP (src para backend e public para o frontend)

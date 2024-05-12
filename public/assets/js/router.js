@@ -6,11 +6,11 @@ const route = (event) => {
 };
 
 const routes = {
-  "/": "/src/pages/index.html",
-  "/lutadores": "/src/pages/lutadores.html",
-  "/social": "/src/pages/social.html",
-  "/changelog": "/src/pages/changelog.html",
-  "/login": "/src/pages/login.html",
+  "/": "/public/pages/index.html",
+  "/lutadores": "/public/pages/lutadores.html",
+  "/social": "/public/pages/social.html",
+  "/changelog": "/public/pages/changelog.html",
+  "/login": "/public/pages/login.html",
 };
 
 const handleLocation = async () => {

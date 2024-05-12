@@ -1,9 +1,9 @@
-@import url(src/assets/css/normalize.css);
-@import url(src/assets/css/variables.css);
-@import url(src/assets/css/utilities.css);
-@import url(src/assets/css/index.css);
-@import url(src/assets/css/lutadores.css);
-@import url(src/assets/css/login.css);
+@import url(assets/css/normalize.css);
+@import url(assets/css/variables.css);
+@import url(assets/css/utilities.css);
+@import url(assets/css/index.css);
+@import url(assets/css/lutadores.css);
+@import url(assets/css/login.css);
 
 * {
   box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
   font-size: 1rem;
   color: var(--neutral-light);
   background-color: var(--neutral-medium);
-  background-image: url("src/assets/images/bg-header.png");
+  background-image: url("assets/images/bg-header.png");
   background-size: cover;
   background-repeat: no-repeat;
   overflow-y: scroll;

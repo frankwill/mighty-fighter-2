@@ -1,0 +1,5 @@
+{
+  "autoload": {
+      "psr-4": {"frankwsb\\mf2\\": "src/"}
+  }
+}

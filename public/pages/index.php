@@ -1,3 +1,18 @@
+<?php
+
+use frankwsb\mf2\Repository\ChangelogRepository;
+
+$dbPath = __DIR__ . "/../../banco.sqlite";
+$pdo = new PDO("sqlite:$dbPath");
+
+require_once 'vendor/autoload.php';
+
+$repository = new ChangelogRepository($pdo);
+
+var_dump($repository->all());
+
+?>
+
 <section class="container d-flex flex-column align-items-center row-gap-9">
   <img src="/public/assets/images/Logo.svg" alt="Mighty Fighter 2 - Logo" width="720">
   <div class="d-flex flex-column align-items-center row-gap-5">

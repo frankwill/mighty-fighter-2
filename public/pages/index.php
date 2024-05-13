@@ -1,5 +1,6 @@
 <?php
 
+use frankwsb\mf2\Model\Changelog;
 use frankwsb\mf2\Repository\ChangelogRepository;
 
 $dbPath = __DIR__ . "/../../banco.sqlite";
@@ -9,7 +10,23 @@ require_once dirname(__FILE__) . '/../../vendor/autoload.php';
 
 $repository = new ChangelogRepository($pdo);
 
-var_dump($repository->all());
+$changelogsData = $repository->all();
+
+$changelogObject = array_map(function($changelogsData) {
+
+  $classeChangelog = new Changelog(
+    $changelogsData['title'],
+    new \DateTimeImmutable($changelogsData['date']),
+    $changelogsData['description']
+  );
+
+  return $classeChangelog;
+}, $changelogsData);
+
+echo '<pre>';
+var_dump($changelogObject);
+echo '</pre>';
+exit();
 
 ?>
 

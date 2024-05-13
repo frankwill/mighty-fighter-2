@@ -5,7 +5,7 @@ use frankwsb\mf2\Repository\ChangelogRepository;
 $dbPath = __DIR__ . "/../../banco.sqlite";
 $pdo = new PDO("sqlite:$dbPath");
 
-require_once 'vendor/autoload.php';
+require_once dirname(__FILE__) . '/../../vendor/autoload.php';
 
 $repository = new ChangelogRepository($pdo);
 

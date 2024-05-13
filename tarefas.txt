@@ -4,8 +4,8 @@
 
 - BACK-END
 [ x ] - Criar uma melhor estrutura de pastas para deixar as lógicas do PHP (src para backend e public para o frontend)
-[ x ] - Classe Changelog e repositório criado
-[  ] - Transformas oque vem do banco em objetos do tipo Changelog
-[  ] - Exibir esses objetos do tipo changelog no frontend
+[ x ] - Classes Changelog e repositório criadas
+[  ] - Transformar oque vem do banco em objetos do tipo Changelog
+[  ] - Exibir esses objetos do tipo Changelog no frontend
 [  ] - Implementar sistema de atualizar os changelogs através do icone de editar
-[  ] - Criar seção com algumas permições para o usuário admin.
+[  ] - Criar seção com algumas permissões para o usuário admin.

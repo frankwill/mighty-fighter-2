@@ -8,4 +8,5 @@
 [ x ] - Transformar oque vem do banco em objetos do tipo Changelog
 [ x ] - Exibir esses objetos do tipo Changelog no frontend
 [ x ] - Criar seção (autenticação e autorização) para exibir botão editar de changelog para o usuário admin.
+[  ] - Criar uma rota para logout e invalidar o id do cookie de seção do navegador do usuário.
 [  ] - Implementar sistema de atualizar os changelogs através do icone de editar

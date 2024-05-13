@@ -29,12 +29,12 @@ class Changelog
     return $this->title;
   }
 
-  public function setdate(DateTimeInterface $date): void
+  public function setDate(DateTimeInterface $date): void
   {
     $this->date = $date;
   }
 
-  public function getdate(): string
+  public function getDate(): string
   {
     return $this->date->format("Y-m-d");
   }

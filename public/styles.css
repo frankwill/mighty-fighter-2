@@ -96,6 +96,7 @@ body::-webkit-scrollbar-thumb {
 
 .changelog {
   border-bottom: 1px solid var(--neutral-medium-dark);
+  min-width: 685px;
 }
 
 .btn-edit {

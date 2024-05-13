@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 use frankwsb\mf2\Model\Changelog;
 use frankwsb\mf2\Repository\ChangelogRepository;
 
@@ -35,9 +37,11 @@ $changelogObject = array_map(function($changelogsData) {
   <div class="changelog d-flex flex-column align-items-start row-gap-3">
     <div class="d-flex align-self-center column-gap-3">
       <span class="text-h5"><?php echo $changelog->getTitle() ?></span>
+      <?php if($_SESSION['logado'] ?? "") { ?>
       <button class="btn-edit">
         <span class="material-icons-outlined color-primary-dark">edit</span>
       </button>
+      <?php } ?>
     </div>
     <span class="text-caption align-self-center"><?php echo $changelog->getDate() ?></span>
     <?php $listItensChangelog = explode(";", $changelog->getDescription()); ?>

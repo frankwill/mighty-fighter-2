@@ -19,7 +19,7 @@
         <a href="/social" onclick="route()" class="navigation__links">Social</a>
         <a href="/changelog" onclick="route()" class="navigation__links">Changelog</a>
         <?php if ($_SESSION['logado'] ?? "") { ?>
-          <a href="/login" onclick="route()" class="navigation__links">Sair</a>
+          <a href="logout.php" class="navigation__links">Sair</a>
         <?php } else { ?>
           <a href="/login" onclick="route()" class="navigation__links">Logar</a>
         <?php } ?>

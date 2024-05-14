@@ -4,6 +4,7 @@
 @import url(assets/css/index.css);
 @import url(assets/css/lutadores.css);
 @import url(assets/css/login.css);
+@import url(assets/css/modal.css);
 
 * {
   box-sizing: border-box;

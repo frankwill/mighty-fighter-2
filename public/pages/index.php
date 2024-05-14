@@ -17,6 +17,7 @@ $changelogsData = $repository->all();
 $changelogObject = array_map(function($changelogsData) {
 
   $classeChangelog = new Changelog(
+    $changelogsData['id'],
     $changelogsData['title'],
     new \DateTimeImmutable($changelogsData['date']),
     $changelogsData['description']
@@ -24,7 +25,6 @@ $changelogObject = array_map(function($changelogsData) {
 
   return $classeChangelog;
 }, $changelogsData);
-
 ?>
 
 <section class="container d-flex flex-column align-items-center row-gap-9">
@@ -108,6 +108,10 @@ $changelogObject = array_map(function($changelogsData) {
       <button class="btn-edit">
         <span class="material-icons-outlined color-primary-dark">edit</span>
       </button>
+      <div class="mask" role="dialog"></div>
+      <div class="modal" role="alert">
+        <button class="close" role="button">X</button>
+      </div>
       <?php } ?>
     </div>
     <span class="text-caption align-self-center"><?php echo $changelog->getDate() ?></span>

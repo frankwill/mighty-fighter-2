@@ -12,8 +12,9 @@ class Changelog
   private readonly string $description;
 
 
-  public function __construct(string $title, DateTimeInterface $date, string $description)
+  public function __construct(int $id, string $title, DateTimeInterface $date, string $description)
   {
+    $this->id = $id;
     $this->title = $title;
     $this->date = $date;
     $this->description = $description;

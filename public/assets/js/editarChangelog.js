@@ -5,6 +5,7 @@ export default function editarChangelog() {
   const btnClose = document.querySelector(".close")
   const mask = document.querySelector(".mask")
   btnEdit.forEach(btn => {
+    console.log(btn)
     btn.addEventListener("click", () => {
       console.log(btn)
       mask.classList.add("active")

@@ -105,7 +105,7 @@ $changelogObject = array_map(function($changelogsData) {
     <div class="d-flex align-self-center column-gap-3">
       <span class="text-h5"><?php echo $changelog->getTitle() ?></span>
       <?php if ($_SESSION['logado'] ?? "") { ?>
-      <button class="btn-edit">
+      <button class="btn-edit" id="<?php echo $changelog->getId() ?>">
         <span class="material-icons-outlined color-primary-dark">edit</span>
       </button>    
       <?php } ?>
@@ -134,7 +134,6 @@ $changelogObject = array_map(function($changelogsData) {
           type="text"
           class="py-2 px-3 text-h6 color-neutral-light"
           name="titulo"
-          value="<?php echo $changelog->getTitle(); ?>"
         >
       </div>
 
@@ -145,15 +144,12 @@ $changelogObject = array_map(function($changelogsData) {
           type="date"
           class="py-2 px-3 text-h6 color-neutral-light"
           name="data"
-          value="<?php echo $changelog->getDate(); ?>"
         >
       </div>
   
       <div>
         <label class="text-h3 d-flex flex-column" for="descricao">Descricao</label>
-        <textarea name="descricao" id="descricao" rows="5" class="text-body">
-          <?php echo $changelog->getDescription();?>
-        </textarea>
+        <textarea name="descricao" id="descricao" rows="5" class="text-body"></textarea>
       </div>
 
       <button type="submit" id="modal__button" class="align-self-center py-3 px-4 color-neutral-light text-h6">SALVAR</button>

@@ -11,6 +11,7 @@ const routes = {
   "/social": "/public/pages/social.php",
   "/changelog": "/public/pages/changelog.php",
   "/login": "/public/pages/login.php",
+  "/adicionar-atualizacao": "/public/pages/adicionar_atualizacao.php",
 };
 
 const handleLocation = async () => {

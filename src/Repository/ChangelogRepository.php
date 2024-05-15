@@ -14,27 +14,21 @@ class ChangelogRepository
     $this->pdo = $pdo;
   }
 
-  public function update(Changelog $changelog): bool
-  {
-    $sql = "UPDATE     changelog 
-            SET        title = :title,
-                       date = :date,
-                       description = :description
-            WHERE      id = :id;";
-    
+  public function add(Changelog $changelog): bool
+  {    
+    $sql = "INSERT INTO changelog (title, date, description) VALUES (:title, :date, :description)";
+
     $statement = $this->pdo->prepare($sql);
     $statement->bindValue(":title", $changelog->getTitle());
     $statement->bindValue(":date", $changelog->getDate());
     $statement->bindValue(":description", $changelog->getDescription());
-    $statement->bindValue(":id", $changelog->getId(), PDO::PARAM_INT);
 
     return $statement->execute();
-
   } 
 
   public function all()
   {
-    $sql = "SELECT * FROM changelog";
+    $sql = "SELECT * FROM changelog ORDER BY id DESC";
     $statement = $this->pdo->query($sql);
     $changelogList = $statement->fetchAll(PDO::FETCH_ASSOC);
 

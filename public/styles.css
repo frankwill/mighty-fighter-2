@@ -100,10 +100,8 @@ body::-webkit-scrollbar-thumb {
   min-width: 685px;
 }
 
-.btn-edit {
-  cursor: pointer;
-  background: none;
-  border: none;
+.adicionar-changelog__icon {
+  font-size: 1rem;
 }
 
 .rodape {

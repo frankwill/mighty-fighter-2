@@ -14,12 +14,10 @@ $repository = new ChangelogRepository($pdo);
 
 $changelogsData = $repository->all();
 
-$changelogObject = array_map(function($changelogsData) {
-
+$changelogObject = array_map(function ($changelogsData) {
   $classeChangelog = new Changelog(
-    $changelogsData['id'],
     $changelogsData['title'],
-    new \DateTimeImmutable($changelogsData['date']),
+    $changelogsData['date'],
     $changelogsData['description']
   );
 
@@ -67,7 +65,7 @@ $changelogObject = array_map(function($changelogsData) {
         <span class="card__data text-body color-neutral-medium-light">01 de abril de 2024</span>
       </div>
       <span class="card__text text-body">
-        Quando você decide resolver suas diferenças no jogo de luta em vez de discutir no grupo da família no WhatsApp. 💥 
+        Quando você decide resolver suas diferenças no jogo de luta em vez de discutir no grupo da família no WhatsApp. 💥
       </span>
     </div>
     <div class="card d-flex flex-column row-gap-2 justify-content-start">
@@ -77,7 +75,7 @@ $changelogObject = array_map(function($changelogsData) {
         <span class="card__data text-body color-neutral-medium-light">01 de abril de 2024</span>
       </div>
       <span class="card__text text-body">
-        Quando você e seu amigo escolhem os mesmos personagens e a luta vira um espelho, só que com mais socos. 😂 
+        Quando você e seu amigo escolhem os mesmos personagens e a luta vira um espelho, só que com mais socos. 😂
       </span>
     </div>
     <div class="card d-flex flex-column row-gap-2">
@@ -87,7 +85,7 @@ $changelogObject = array_map(function($changelogsData) {
         <span class="card__data text-body color-neutral-medium-light">01 de abril de 2024</span>
       </div>
       <span class="card__text text-body">
-        Aquele momento tenso quando você está prestes a vencer a luta, mas seu joystick decide te trair e pular do sofá. 🎮😱 #JoystickTraiçoeiro #QuedaFatal 
+        Aquele momento tenso quando você está prestes a vencer a luta, mas seu joystick decide te trair e pular do sofá. 🎮😱 #JoystickTraiçoeiro #QuedaFatal
       </span>
     </div>
   </div>
@@ -99,60 +97,30 @@ $changelogObject = array_map(function($changelogsData) {
   <span class="text-body text-center">
     Confira o changelog mais recente do nosso jogo: correções de bugs, melhorias de desempenho e ajustes de equilíbrio para tornar sua experiência ainda mais épica!
   </span>
+  <?php if ($_SESSION['logado'] ?? "") { ?>
+    <a 
+      href="/adicionar-atualizacao"
+      onclick="route()"
+      class="d-flex align-items-center btn flat text-button color-neutral-light text-decoration-none text-center"
+    >
+      Adicionar atualização
+      <span class="adicionar-changelog__icon material-icons-outlined color-neutral-light">add</span>
+    </a>
+  <?php } ?>
   <hr class="line-divider">
-  <?php foreach($changelogObject as $changelog) { ?>
-  <div class="changelog d-flex flex-column align-items-start row-gap-3">
-    <div class="d-flex align-self-center column-gap-3">
-      <span class="text-h5"><?php echo $changelog->getTitle() ?></span>
-      <?php if ($_SESSION['logado'] ?? "") { ?>
-      <button class="btn-edit" id="<?php echo $changelog->getId() ?>">
-        <span class="material-icons-outlined color-primary-dark">edit</span>
-      </button>    
-      <?php } ?>
+  <?php foreach ($changelogObject as $changelog) { ?>
+    <div class="changelog d-flex flex-column align-items-start row-gap-3">
+      <div class="d-flex align-self-center column-gap-3">
+        <span class="text-h5"><?php echo $changelog->getTitle() ?></span>
+      </div>
+      <span class="text-caption align-self-center"><?php echo $changelog->getDate() ?></span>
+      <?php $listItensChangelog = explode(";", $changelog->getDescription()); ?>
+      <ul class="text-body">
+        <?php foreach ($listItensChangelog as $item) { ?>
+          <li><?php echo $item ?></li>
+        <?php } ?>
+      </ul>
     </div>
-    <span class="text-caption align-self-center"><?php echo $changelog->getDate() ?></span>
-    <?php $listItensChangelog = explode(";", $changelog->getDescription()); ?>
-    <ul class="text-body">
-      <?php foreach($listItensChangelog as $item) { ?>
-      <li><?php echo $item ?></li>
-      <?php } ?>
-    </ul>
-  </div>
   <?php } ?>
   <a href="/changelog" onclick="route()" id="ver-mais-changelog" class="btn flat text-button color-neutral-light text-decoration-none text-center">Ver mais</a>
 </section>
-
-<div class="mask" role="dialog"></div>
-<div class="modal" role="alert">
-  <button class="close text-h3" role="button">X</button>
-  <form>
-    <div id="modal__container" class="pa-5 d-flex flex-column justify-content-center row-gap-5">
-      <div>
-        <label class="text-h3 d-flex flex-column" for="modal__titulo">Titulo</label>
-        <input 
-          id="modal__titulo"
-          type="text"
-          class="py-2 px-3 text-h6 color-neutral-light"
-          name="titulo"
-        >
-      </div>
-
-      <div>
-        <label class="text-h3 d-flex flex-column" for="modal__data">Data</label>
-        <input
-          id="modal__data"
-          type="date"
-          class="py-2 px-3 text-h6 color-neutral-light"
-          name="data"
-        >
-      </div>
-  
-      <div>
-        <label class="text-h3 d-flex flex-column" for="descricao">Descricao</label>
-        <textarea name="descricao" id="descricao" rows="5" class="text-body"></textarea>
-      </div>
-
-      <button type="submit" id="modal__button" class="align-self-center py-3 px-4 color-neutral-light text-h6">SALVAR</button>
-    </div>
-  </form>
-</div>  

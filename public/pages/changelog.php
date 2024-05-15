@@ -18,7 +18,7 @@ $changelogObject = array_map(function($changelogsData) {
 
   $classeChangelog = new Changelog(
     $changelogsData['title'],
-    new \DateTimeImmutable($changelogsData['date']),
+    $changelogsData['date'],
     $changelogsData['description']
   );
 
@@ -32,16 +32,21 @@ $changelogObject = array_map(function($changelogsData) {
   <span class="text-body text-center">
     Confira o changelog mais recente do nosso jogo: correções de bugs, melhorias de desempenho e ajustes de equilíbrio para tornar sua experiência ainda mais épica!
   </span>
+  <?php if($_SESSION['logado'] ?? "") { ?>
+        <a 
+          href="/adicionar-atualizacao"
+          onclick="route()"
+          class="d-flex align-items-center btn flat text-button color-neutral-light text-decoration-none text-center"
+        >
+          Adicionar atualização
+          <span class="adicionar-changelog__icon material-icons-outlined color-neutral-light">add</span>
+        </a>
+      <?php } ?>
   <hr class="line-divider">
   <?php foreach($changelogObject as $changelog) { ?>
   <div class="changelog d-flex flex-column align-items-start row-gap-3">
     <div class="d-flex align-self-center column-gap-3">
       <span class="text-h5"><?php echo $changelog->getTitle() ?></span>
-      <?php if($_SESSION['logado'] ?? "") { ?>
-      <button class="btn-edit">
-        <span class="material-icons-outlined color-primary-dark">edit</span>
-      </button>
-      <?php } ?>
     </div>
     <span class="text-caption align-self-center"><?php echo $changelog->getDate() ?></span>
     <?php $listItensChangelog = explode(";", $changelog->getDescription()); ?>

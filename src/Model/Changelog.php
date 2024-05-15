@@ -2,19 +2,16 @@
 
 namespace frankwsb\mf2\Model;
 
-use DateTimeInterface;
-
 class Changelog
 {
   private readonly int $id;
   private readonly string $title;
-  private readonly DateTimeInterface $date;
+  private readonly string $date;
   private readonly string $description;
 
 
-  public function __construct(int $id, string $title, DateTimeInterface $date, string $description)
+  public function __construct(string $title, string $date, string $description)
   {
-    $this->id = $id;
     $this->title = $title;
     $this->date = $date;
     $this->description = $description;
@@ -30,14 +27,14 @@ class Changelog
     return $this->title;
   }
 
-  public function setDate(DateTimeInterface $date): void
+  public function setDate(string $date): void
   {
     $this->date = $date;
   }
 
   public function getDate(): string
   {
-    return $this->date->format("Y-m-d");
+    return $this->date;
   }
 
   public function setId(int $id): void

@@ -6,6 +6,7 @@ export default function editarChangelog() {
   const mask = document.querySelector(".mask")
   btnEdit.forEach(btn => {
     btn.addEventListener("click", () => {
+      console.log(btn)
       mask.classList.add("active")
     })
   })
@@ -14,6 +15,5 @@ export default function editarChangelog() {
     mask.classList.remove("active")
   })
 
-  
-  
+
 }

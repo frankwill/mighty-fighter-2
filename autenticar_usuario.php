@@ -7,8 +7,8 @@ if ($usuario === "admin" && $senha === "123") {
   session_start();
   $_SESSION['logado'] = true;
 
-  header("Location: /?success=1");
+  header("Location: /");
 } else {
   $_SESSION['logado'] = false;
-  header("Location: /login?success=0");
+  header("Location: /login");
 }

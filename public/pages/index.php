@@ -107,11 +107,7 @@ $changelogObject = array_map(function($changelogsData) {
       <?php if ($_SESSION['logado'] ?? "") { ?>
       <button class="btn-edit">
         <span class="material-icons-outlined color-primary-dark">edit</span>
-      </button>
-      <div class="mask" role="dialog"></div>
-      <div class="modal" role="alert">
-        <button class="close" role="button">X</button>
-      </div>
+      </button>    
       <?php } ?>
     </div>
     <span class="text-caption align-self-center"><?php echo $changelog->getDate() ?></span>
@@ -125,3 +121,42 @@ $changelogObject = array_map(function($changelogsData) {
   <?php } ?>
   <a href="/changelog" onclick="route()" id="ver-mais-changelog" class="btn flat text-button color-neutral-light text-decoration-none text-center">Ver mais</a>
 </section>
+
+<div class="mask" role="dialog"></div>
+<div class="modal" role="alert">
+  <button class="close text-h3" role="button">X</button>
+  <form>
+    <div id="modal__container" class="pa-5 d-flex flex-column justify-content-center row-gap-5">
+      <div>
+        <label class="text-h3 d-flex flex-column" for="modal__titulo">Titulo</label>
+        <input 
+          id="modal__titulo"
+          type="text"
+          class="py-2 px-3 text-h6 color-neutral-light"
+          name="titulo"
+          value="<?php echo $changelog->getTitle(); ?>"
+        >
+      </div>
+
+      <div>
+        <label class="text-h3 d-flex flex-column" for="modal__data">Data</label>
+        <input
+          id="modal__data"
+          type="date"
+          class="py-2 px-3 text-h6 color-neutral-light"
+          name="data"
+          value="<?php echo $changelog->getDate(); ?>"
+        >
+      </div>
+  
+      <div>
+        <label class="text-h3 d-flex flex-column" for="descricao">Descricao</label>
+        <textarea name="descricao" id="descricao" rows="5" class="text-body">
+          <?php echo $changelog->getDescription();?>
+        </textarea>
+      </div>
+
+      <button type="submit" id="modal__button" class="align-self-center py-3 px-4 color-neutral-light text-h6">SALVAR</button>
+    </div>
+  </form>
+</div>  

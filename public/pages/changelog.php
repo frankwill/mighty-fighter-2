@@ -57,5 +57,4 @@ $changelogObject = array_map(function($changelogsData) {
     </ul>
   </div>
   <?php } ?>
-  <a href="/changelog" onclick="route()" id="ver-mais-changelog" class="btn flat text-button color-neutral-light text-decoration-none text-center">Ver mais</a>
 </section>

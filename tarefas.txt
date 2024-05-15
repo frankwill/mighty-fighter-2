@@ -1,6 +1,7 @@
 - FRONT-END
 [ x ] - Arrumar redirecionamentos dos botões "Ver mais" das seções Social Mighty e Changelog
-[  ] - Criar modal de editar um changelog
+[  ] - Hover nos links da nav (caixa preta)
+
 
 - BACK-END
 [ x ] - Criar uma melhor estrutura de pastas para deixar as lógicas do PHP (src para backend e public para o frontend)
@@ -9,4 +10,4 @@
 [ x ] - Exibir esses objetos do tipo Changelog no frontend
 [ x ] - Criar seção (autenticação e autorização) para exibir botão editar de changelog para o usuário admin.
 [ x ] - Criar uma rota para logout e invalidar o id do cookie de seção do navegador do usuário.
-[  ] - Implementar sistema de atualizar os changelogs através do icone de editar
+[ x ] - Implementar sistema de adicionar os changelogs através do butão "+"

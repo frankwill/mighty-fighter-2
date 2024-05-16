@@ -41,3 +41,7 @@ Esse site foi enviado como atividade para a matéria de Programação Web - 7º 
 - [ x ] - Criar uma rota para logout e invalidar o id do cookie de seção do navegador do usuário.
 - [ x ] - Implementar sistema de adicionar os changelogs através do butão "+"
 
+
+## Conclusão
+
+Com esse projeto da faculdade, pude aprimorar na prática desenvolvimento web full stack, aproveitando ao máximo minhas habilidades em design e programação. A implementação da stack HTML, CSS e JavaScript no front-end e PHP com SQLite no back-end ofereceu uma base sólida para a construção deste site dinâmico. Durante o processo, enfrentei desafios citados na seção **Lista de tarefas** que contribuiram muito para o meu aprendizado.

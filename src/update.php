@@ -1,6 +1,6 @@
 <?php 
 
-$dbPath = __DIR__ . "/banco.sqlite";
+$dbPath = __DIR__ . "/../banco.sqlite";
 $pdo = new PDO("sqlite:$dbPath");
 
 // $description = "Adicionados 2 novos personagens jogáveis: C. Tonaldo e Aren;

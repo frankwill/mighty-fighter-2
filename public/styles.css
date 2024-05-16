@@ -44,10 +44,19 @@ body::-webkit-scrollbar-thumb {
   align-items: start;
 }
 
+/* .navigation__container {
+  box-sizing: border-box;
+} */
 
 .navigation__links {
   text-decoration: none;
   color: var(--neutral-light);
+  padding: 12px 16px;
+}
+
+.navigation__links:hover {
+  background-color: var(--neutral-dark);
+  border-radius: 4px;
 }
 
 .social__container {

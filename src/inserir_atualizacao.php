@@ -1,9 +1,9 @@
 <?php
 
-$dbPath = __DIR__ . "/banco.sqlite";
+$dbPath = __DIR__ . "/../banco.sqlite";
 $pdo = new PDO("sqlite:$dbPath");
 
-require_once dirname(__FILE__) . '/vendor/autoload.php';
+require_once dirname(__FILE__) . '/../vendor/autoload.php';
 
 $titulo = filter_input(INPUT_POST, "titulo");
 $data = filter_input(INPUT_POST, "data");

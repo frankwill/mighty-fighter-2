@@ -17,6 +17,7 @@ $changelogsData = $repository->all();
 $changelogObject = array_map(function($changelogsData) {
 
   $classeChangelog = new Changelog(
+    $changelogsData['id'],
     $changelogsData['title'],
     $changelogsData['date'],
     $changelogsData['description']

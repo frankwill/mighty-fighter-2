@@ -28,6 +28,9 @@ Esse site foi enviado como atividade para a matéria de Programação Web - 7º 
 ## ✅ Lista de tarefas
 
 **FRONT-END**
+- [ x ] - Criar variáveis CSS de acordo com o design system do Figma
+- [ x ] - Criar utilities.css com classes que auxiliem nosso desenvolvimento no front-end
+- [ x ] - Display Flex e Grid para distribuição de elementos na página
 - [ x ] - Arrumar redirecionamentos dos botões "Ver mais" das seções Social Mighty e Changelog
 - [ x ] - Hover nos links da nav (caixa preta)
 

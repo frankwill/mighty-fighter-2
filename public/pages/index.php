@@ -16,6 +16,7 @@ $changelogsData = $repository->all();
 
 $changelogObject = array_map(function ($changelogsData) {
   $classeChangelog = new Changelog(
+    $changelogsData['id'],
     $changelogsData['title'],
     $changelogsData['date'],
     $changelogsData['description']
@@ -98,11 +99,7 @@ $changelogObject = array_map(function ($changelogsData) {
     Confira o changelog mais recente do nosso jogo: correções de bugs, melhorias de desempenho e ajustes de equilíbrio para tornar sua experiência ainda mais épica!
   </span>
   <?php if ($_SESSION['logado'] ?? "") { ?>
-    <a 
-      href="/adicionar-atualizacao"
-      onclick="route()"
-      class="d-flex align-items-center btn flat text-button color-neutral-light text-decoration-none text-center"
-    >
+    <a href="/adicionar-atualizacao" onclick="route()" class="d-flex align-items-center btn flat text-button color-neutral-light text-decoration-none text-center">
       Adicionar atualização
       <span class="adicionar-changelog__icon material-icons-outlined color-neutral-light">add</span>
     </a>
@@ -112,6 +109,14 @@ $changelogObject = array_map(function ($changelogsData) {
     <div class="changelog d-flex flex-column align-items-start row-gap-3">
       <div class="d-flex align-self-center column-gap-3">
         <span class="text-h5"><?php echo $changelog->getTitle() ?></span>
+        <?php if ($_SESSION['logado'] ?? "") { ?>
+          <a 
+            href="/src/excluir_atualizacao.php?id=<?php echo $changelog->getId()?>"
+            class="d-flex align-items-center text-decoration-none"
+          >
+            <span class="material-icons-outlined text-h3">close</span>
+          </a>
+        <?php } ?>
       </div>
       <span class="text-caption align-self-center"><?php echo $changelog->getDate() ?></span>
       <?php $listItensChangelog = explode(";", $changelog->getDescription()); ?>

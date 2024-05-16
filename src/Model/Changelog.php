@@ -4,14 +4,15 @@ namespace frankwsb\mf2\Model;
 
 class Changelog
 {
-  private readonly int $id;
+  private readonly ?int $id;
   private readonly string $title;
   private readonly string $date;
   private readonly string $description;
 
 
-  public function __construct(string $title, string $date, string $description)
+  public function __construct(int $id, string $title, string $date, string $description)
   {
+    $this->id = $id;
     $this->title = $title;
     $this->date = $date;
     $this->description = $description;

@@ -1,6 +1,6 @@
 - FRONT-END
 [ x ] - Arrumar redirecionamentos dos botões "Ver mais" das seções Social Mighty e Changelog
-[  ] - Hover nos links da nav (caixa preta)
+[ x ] - Hover nos links da nav (caixa preta)
 
 
 - BACK-END

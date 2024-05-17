@@ -1,6 +1,6 @@
 <?php
 
-$dbPath = __DIR__ . "/../banco.sqlite";
+$dbPath = realpath(dirname(__DIR__) . "/banco.sqlite");
 $pdo = new PDO("sqlite:$dbPath");
 
 require_once dirname(__FILE__) . '/../vendor/autoload.php';

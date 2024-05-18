@@ -1,9 +1,7 @@
 <?php
-
+require_once dirname(__FILE__) . '/../vendor/autoload.php';
 use frankwsb\mf2\Infrastructure\Persistence\ConnectionCreate;
 $pdo = ConnectionCreate::createConnection();
-
-require_once dirname(__FILE__) . '/../vendor/autoload.php';
 
 $titulo = filter_input(INPUT_POST, "titulo");
 $data = filter_input(INPUT_POST, "data");

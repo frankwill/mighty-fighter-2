@@ -1,8 +1,7 @@
-<?php 
+<?php
 
-$dbPath = __DIR__ . "/../banco.sqlite";
-$pdo = new PDO("sqlite:$dbPath");
-
+use frankwsb\mf2\Infrastructure\Persistence\ConnectionCreate;
+$pdo = ConnectionCreate::createConnection();
 
 $pdo->exec("DELETE FROM changelog WHERE id = 2");
 

@@ -5,8 +5,8 @@ session_start();
 use frankwsb\mf2\Model\Changelog;
 use frankwsb\mf2\Repository\ChangelogRepository;
 
-$dbPath = __DIR__ . "/../../banco.sqlite";
-$pdo = new PDO("sqlite:$dbPath");
+use frankwsb\mf2\Infrastructure\Persistence\ConnectionCreate;
+$pdo = ConnectionCreate::createConnection();
 
 require_once dirname(__FILE__) . '/../../vendor/autoload.php';
 

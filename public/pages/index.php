@@ -39,7 +39,7 @@ $changelogObject = array_map(function ($changelogsData) {
     </span>
   </div>
   <div class="d-flex column-gap-5">
-    <a href="#" class="btn flat text-button color-neutral-light text-decoration-none text-center">Jogar de graça</a>
+    <a href="https://drive.google.com/file/d/1vQpYzeQtVYGCAy-MVm_qPvyMJLZ0VgCq/view" class="btn flat text-button color-neutral-light text-decoration-none text-center">Jogar de graça</a>
     <a href="#" class="btn outlined text-button color-neutral-light text-decoration-none text-center">Assistir trailer</a>
   </div>
 </section>
